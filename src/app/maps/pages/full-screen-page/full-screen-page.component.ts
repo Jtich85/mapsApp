@@ -1,14 +1,14 @@
 import { AfterViewInit, Component } from '@angular/core';
 
-//import * as mapboxgl from 'mapbox-gl';
-import * as mapboxgl from 'mapbox-gl'; // Importación correcta para Angular
+import mapboxgl from 'mapbox-gl'; // Importar mapbox-gl correctamente
 
+// Configuración correcta del token de acceso
 (mapboxgl as any).accessToken = 'pk.eyJ1IjoianRpY2g4NSIsImEiOiJjbTB3eW1lMzIwNnowMmtwc3hvMDcyajAzIn0.SDgQlBIBQfhfLWpf7-cP9w';
 
 @Component({
   selector: 'app-full-screen-page',
   templateUrl: './full-screen-page.component.html',
-  styleUrl: './full-screen-page.component.css',
+  styleUrls: ['./full-screen-page.component.css'], // Cambié 'styleUrl' a 'styleUrls' para evitar errores tipográficos
 })
 export class FullScreenPageComponent implements AfterViewInit{
 
